@@ -70,7 +70,10 @@ def motor(controller, port, starboard, depth):
 
 def port(controller, speed):
         #print port
-        mleft.setMotorSpeed(speed)
+        if controller == "aa":
+            mleft.setMotorSpeed(speed)
+        else:
+            mmleft.setMotorSpeed(speed)
 
         showmotor(controller, 2, speed)
 
@@ -80,7 +83,10 @@ def port(controller, speed):
 
 def starboard(controller, speed):
         #print starboard
-        mright.setMotorSpeed(speed)
+        if controller == "aa":
+            mright.setMotorSpeed(speed)
+        else:
+            mmright.setMotorSpeed(speed)
 
         showmotor(controller, 0, speed)
 
@@ -90,7 +96,10 @@ def starboard(controller, speed):
 
 def depth(controller, speed):
         #print depth
-        mvert.setMotorSpeed(speed)
+        if controller == "aa":
+            mvert.setMotorSpeed(speed)
+        else:
+            mmvert.setMotorSpeed(speed)
 
         showmotor(controller, 4, speed)
 
@@ -166,6 +175,10 @@ dw = dw_MotorCONTROL( addr=0x60 )
 mleft = dw.getMotor(2)
 mright = dw.getMotor(1)
 mvert = dw.getMotor(3)
+
+mmleft = dw.getMotor(5)
+mmright = dw.getMotor(4)
+mmvert = dw.getMotor(6)
 
 controllerlist = []
 
