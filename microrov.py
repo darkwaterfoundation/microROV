@@ -172,12 +172,12 @@ print("Attaching Motors")
 dw = dw_MotorCONTROL( addr=0x60 )
 # Swap for different address if also using scrollphat
 #dw = dw_MotorCONTROL( addr=0x61 )
-mleft = dw.getMotor(2)
-mright = dw.getMotor(1)
+mleft = dw.getMotor(1)
+mright = dw.getMotor(2)
 mvert = dw.getMotor(3)
 
-mmleft = dw.getMotor(5)
-mmright = dw.getMotor(4)
+mmleft = dw.getMotor(4)
+mmright = dw.getMotor(5)
 mmvert = dw.getMotor(6)
 
 controllerlist = []
