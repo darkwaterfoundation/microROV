@@ -52,6 +52,8 @@ class ps3:
 		self.lastleft = -1
 		self.lastright = -1
 		self.lastvert = -1
+		self.lastvert2 = -1
+		self.lastside = -1
 		self.lastbuttontime = 0
 		# get count of joysticks=1, axes=27, buttons=19 for DualShock 3
 	def select_joystick(self, num):
